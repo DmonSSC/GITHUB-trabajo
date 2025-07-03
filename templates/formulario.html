@@ -1,0 +1,65 @@
+<!-- templates/formulario.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen Ordinario</title>
+</head>
+<body>
+    <h2>Examen Ordinario</h2>
+    <form action="/ordinario" method="POST">
+        <label>Fecha: {{ fecha }}</label><br><br>
+
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Correo electrónico:</label><br>
+        <input type="email" name="correo" required><br><br>
+
+        <label>Teléfono:</label><br>
+        <input type="text" name="telefono" maxlength="10" required><br><br>
+
+        <label>PIN de desbloqueo:</label><br>
+        <input type="password" name="pin" required><br><br>
+
+        <label>Medio:</label><br>
+        <select name="medio" required>
+            <option value="">Seleccionar</option>
+            <option value="Redes">Redes</option>
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Visita">Visita</option>
+            <option value="Llamada">Llamada</option>
+        </select><br><br>
+
+        <label>Equipo:</label><br>
+        <select name="equipo" required>
+            <option value="">Seleccionar</option>
+            <option value="iPhone 16">iPhone 16</option>
+            <option value="iPhone 16 e">iPhone 16 e</option>
+            <option value="iPhone 16 Pro">iPhone 16 Pro</option>
+            <option value="iPhone 16 Pro Max">iPhone 16 Pro Max</option>
+        </select><br><br>
+
+        <label>Reparación:</label><br>
+        <select name="reparacion" required>
+            <option value="">Seleccionar</option>
+            <option value="Cambio de batería">Cambio de batería</option>
+            <option value="Cambio de pantalla">Cambio de pantalla</option>
+            <option value="Dictamen Técnico">Dictamen Técnico</option>
+            <option value="Servicio de diagnóstico">Servicio de diagnóstico</option>
+        </select><br><br>
+
+        <label>Estatus:</label><br>
+        <select name="estatus" required>
+            <option value="">Seleccionar</option>
+            <option value="Se hizo seguimiento">Se hizo seguimiento</option>
+            <option value="Consulta">Consulta</option>
+            <option value="Dejó equipo">Dejó equipo</option>
+            <option value="No quiso">No quiso</option>
+            <option value="Encontró más barato">Encontró más barato</option>
+        </select><br><br>
+
+        <button type="submit">ENVIAR</button>
+    </form>
+</body>
+</html>
